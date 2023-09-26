@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS DOM</title>
+    <style>
+        div#area {
+            background-color: rgb(121, 231, 12);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font: normal 20pt Arial;
+        }
+
+        body{
+            font: normal 20pt arial;
+            text-align: center;
+            background-color: darkgrey;
+        }
+
+        input {
+            font: normal 28pt Arial;
+            width: 100px;
+            
+        }
+        div#res {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>somando valores</h1>
+
+    <input type="number" name="textn1" id="textn1"> +
+    <input type="number" name="textn2" id="textn2">
+    <input type="button" value="somar" id="button" onclick="somar()" onmouseover="button()" onmouseout="mudarCor()">
+
+    <div id="res">
+        Resultado:
+    </div>
+
+    <div id="area">
+        Interaja...
+     </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+        function clicar(){
+            a.innerText = 'clicou!!'
+            a.style.background = 'blue'
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou!!'
+            a.style.background = 'green'
+        }
+
+        function sair(){
+            a.innerText = 'saiuu!!'
+            a.style.background = 'red'
+        }
+        //---------------------------------------------------------------------
+        function somar(){
+            var tn1 =  document.getElementById('textn1')
+            var tn2 = document.getElementById('textn2')
+            var resposta =  document.getElementById('res')
+            var y = Number(tn1.value)
+            var x = Number(tn2.value)
+            var s = x + y
+            resposta.innerHTML = `A soma entre ${y} e ${x} é igual a <strong>${s} </strong>`
+
+        }
+        var b = document.getElementById('button')
+        function button(){
+            b.style.background = 'green'
+
+        }
+        function mudarCor(){
+            b.style.background = 'white'
+        }
+        function voltaCor(){
+            b.style.background = 'green'
+        }
+    </script>
+    
+</body>
+</html>

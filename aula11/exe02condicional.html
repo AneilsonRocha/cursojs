@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus pais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar" style="background-color: #d1d8af;">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="30" height="30" class="d-inline-block align-text-top">
+            <strong>Condicional</strong>
+          </a>
+        </div>
+      </nav>
+
+      <img src="https://img.freepik.com/vetores-premium/bandeiras-do-mundo-redondo-nacional-bandeiras-de-paises-da-europa-america-e-asia-conjunto-de-ilustracao-vetorial-nacional-arredondada-emblemas-de-paises-do-mundo-emblema-nacional-do-pais-estado-internacional-da-asia-e-da-america_229548-1653.jpg" class="rounded  mx-auto d-block" alt="..." style="margin-top: 20px;">
+
+      <form style="margin-top: 20px;text-align: center;">
+        <div class="mb-3">
+          <label class="form-label"><strong>Pais de origem</strong></label><br>
+          <input type="text"  id="exampleInputEmail1" style="width: 170px;height: 30px;line-height: 30px;">
+          <div id="emailHelp" class="form-text">Digite o seu pais...</div>
+        </div>
+        <button type="button" class="btn btn-success" id="butt" onclick="analisar()"  onmouseover="clicar()" onmouseout="voltaCor()">Enviar</button>
+      </form>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script>
+        var p =  document.getElementById("exampleInputEmail1")
+        var mudar = document.getElementById('butt')
+
+        function analisar(){
+            var res = document.getElementById("emailHelp")
+            var pais = String(p.value)
+            
+            if (pais != 'brasil') {
+                res.innerHTML = `<p>Voce é <strong>Estrageiroo</strong> ${pais} volte amanha jovem </p> `
+            }
+            else{
+                res.innerHTML = `<p>Voce é <strong>Brasileiro</strong> meu caro jovem ${pais} </p> `
+            }
+        }
+
+        function clicar(){
+            mudar.style.background = 'blue'
+        }
+
+        function voltaCor(){
+            mudar.style.background = 'green'
+        }
+
+      </script>
+</body>
+</html>
