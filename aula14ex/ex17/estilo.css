@@ -1,6 +1,7 @@
 body {
     background-color: rgb(94, 94, 240) ;
     font: normal 15pt Arial;
+    
 }
 
 header {
@@ -16,8 +17,16 @@ section {
     margin: auto;
     box-shadow: 5px 5px 15px rgb(10, 10, 10);
     
+    
 
 }
+
+div {
+    padding: 5px;
+    flex-direction: row;
+}
+
+
 
 
 
